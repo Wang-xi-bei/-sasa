@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="sass/zhuce.css">
+    <link rel="stylesheet" href="sass/public.css">
+    </head>
+    <body>
+<header class="margin">
+    <img src="images/logo.png" class="logo" alt="">
+    <div class="haitao">
+        <p>香港莎莎 官方自营 正货海淘</p>
+        <ul>
+            <li><img src="images/zi.png" alt="">官方自营</li>
+            <li><img src="images/zheng.png" alt="">正货担保</li>
+            <li><img src="images/dun.png" alt="">30天售后服务</li>
+        </ul>
+    </div>
+</header>
+    <section id="login" class="margin">
+        <div class="lo">
+            <p>用户注册</p>
+            <input type="text" placeholder="请输入用户名" id="user">
+            <input type="password" placeholder="请输入密码" id="pass">
+            <em class="hide"></em>
+            <em class="show"></em>
+            <span>已有账户？<a href="denglu.html">登录</a></span>
+            <div class="denglu" id="res">注册</div>
+        </div>
+        <div class="tips">
+            <p>用户名错误</p>
+            <input type="button" value="确定">
+        </div>
+    </section>
+    <div class="bb"></div>
+    <footer>
+        <div class="margin">
+            <div class="foot-t">
+            <a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a>
+            </div>
+            <div class="foot-b">
+                <b>dhajkdh ajdkhajdhak 伤筋动大多数的第三方骨健 康大师对话国 家按施工搭</b><img src="images/emblem.png" alt=""><b>大数据搭嘎环境范德萨发生阿道夫萨达水电费方式的干部</b>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+    var user = document.querySelector("#user");
+    var pass = document.querySelector("#pass");
+    var zhu = document.querySelector("#res");
+    var tips = document.querySelector(".tips");
+    var op = document.querySelector(".tips p");
+    var x = false;
+    var y = false;
+
+    var btn = document.querySelector(".tips input")
+    btn.onclick = function(){ 
+        tips.style.display = "none";
+    }
+
+    user.onblur = function(){
+        var reg = /^[\w\-\u2E80-\u9FFF]{2,8}$/;
+        var res = reg.test(user.value);
+        if(this.value == ""){
+            tips.style.display = "block";
+            op.innerHTML="用户名不能为空";
+            x = false;
+        }else{
+            if(res){
+                x = true;
+            }else{
+                tips.style.display = "block";
+                op.innerHTML="用户名必须为4~8位字母,数字,下划线，中文";
+                x = false;
+            }
+        }
+    }
+
+    pass.onblur = function(){
+        var reg = /^\w{4,12}$/;
+        var res = reg.test(pass.value);
+        if(this.value == ""){
+            tips.style.display = "block";
+            op.innerHTML="密码不能为空";
+            y = false;
+        }else{
+            if(res){
+                y = true;
+            }else{
+                tips.style.display = "block";
+                op.innerHTML="密码必须为4~12位数字，字母，下划线";
+                y = false;
+            }
+        }
+        
+    }
+
+    zhu.onclick = function(){
+        if(x && y){
+            tips.style.display = "block";
+            op.innerHTML="注册成功";
+            var msg = localStorage.getItem('up') ? JSON.parse(localStorage.getItem('up')) : [];
+            console.log(msg)
+            msg.push({
+                user : user.value,
+                pass : pass.value 
+            });
+            for(var i = 0;i < msg.length;i++){
+                for(var j = i + 1;j < msg.length;j++){
+                    if(msg[j].user === msg[i].user){
+                        msg.splice(j,1);
+                        j--;
+                    }
+                }
+            }
+            localStorage.setItem('up',JSON.stringify(msg));
+            btn.value = "去登陆";
+            btn.onclick = function(){
+                window.location.href = "denglu.html";
+            }
+        }else{
+            tips.style.display = "block";
+            op.innerHTML="注册失败";
+        }
+    }
+</script>
+    
+</body>
+</html>

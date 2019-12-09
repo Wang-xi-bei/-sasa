@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登 录</title>
+    <link rel="stylesheet" href="sass/public.css">
+    <link rel="stylesheet" href="sass/denglu.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header class="margin">
+        <img src="images/logo.png" class="logo" alt="">
+        <div class="haitao">
+            <p>香港莎莎 官方自营 正货海淘</p>
+            <ul>
+                <li><img src="images/zi.png" alt="">官方自营</li>
+                <li><img src="images/zheng.png" alt="">正货担保</li>
+                <li><img src="images/dun.png" alt="">30天售后服务</li>
+            </ul>
+        </div>
+    </header>
+    <section id="login" class="margin">
+        <div class="lo">
+            <p>账户登录</p>
+            <input type="text" placeholder="请输入用户名" id="user">
+            <input type="password" placeholder="请输入密码" id="pass">
+            <em class="hide"></em>
+            <em class="show"></em>
+            <div class="denglu">登录</div>
+            <div class="register">
+                <a href="zhuce.html" class="reg">立即注册</a>
+                <a href="#" class="pas">忘记密码</a>
+            </div>
+            <div class="more">
+                <img src="images/weibo.png" alt="">
+                <img src="images/weixin.png" alt="">
+                <img src="images/alipay.png" alt="">
+            </div>
+            <div class="tips">
+                <p></p>
+                <input type="button" value="确定">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="margin">
+            <div class="foot-t">
+            <a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a><span>|</span><a href="#">公司简介</a>
+            </div>
+            <div class="foot-b">
+                <b>dhajkdh ajdkhajdhak 伤筋动大多数的第三方骨健 康大师对话国 家按施工搭</b><img src="images/emblem.png" alt=""><b>大数据搭嘎环境范德萨发生阿道夫萨达水电费方式的干部</b>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+    var pass = document.getElementById('pass');
+    var hide = document.querySelector('.hide');
+    var show = document.querySelector('.show');
+    hide.onclick = function(){
+        hide.style.display = 'none';
+        pass.type = 'text';
+        show.style.display = 'block';
+    }
+    show.onclick = function(){
+        show.style.display = 'none';
+        pass.type = 'password';
+        hide.style.display = 'block';
+    }
+    $(".logo").on("click",function(){
+            window.location.href = 'http://localhost:81';
+        })
+</script>
+<script>
+    var user = document.querySelector("#user");
+    var pass = document.querySelector("#pass");
+    var tips = document.querySelector(".tips");
+    var op = document.querySelector(".tips p");
+    var denglu = document.querySelector(".denglu");
+    var x = false;
+    var y = false;
+
+    var btn = document.querySelector(".tips input")
+    btn.onclick = function(){
+        tips.style.display = "none";
+    }
+
+    var msg = localStorage.getItem('up') ? JSON.parse(localStorage.getItem('up')) : [];
+    user.onblur = function(){
+        for(var i = 0;i < msg.length;i++){
+            if(this.value == msg[i].user){
+                x = true;
+                return;
+            }
+        }
+            x = false;
+    }
+    pass.onblur = function(){
+        for(var j = 0;j < msg.length;j++){
+            if(this.value == msg[j].pass){
+                y = true;
+                return;
+            }
+        }
+            y = false;
+    }
+
+    denglu.onclick = function(){
+        if(x && y){
+            tips.style.display = "block";
+            op.innerHTML="登录成功";
+            btn.value = "去首页";
+            btn.onclick = function(){
+                window.location.href = "http://localhost:81";
+            }
+        }else{
+            tips.style.display = "block";
+            op.innerHTML="登录失败";
+        }
+    }
+
+</script>
+</body>
+</html>

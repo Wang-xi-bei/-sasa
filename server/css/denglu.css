@@ -1,0 +1,111 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+.margin {
+  width: 1200px;
+  margin: 0 auto; }
+
+body {
+  background: url(../images/33.jpg) no-repeat; }
+
+header {
+  height: 78px;
+  padding-top: 20px; }
+  header .logo {
+    width: 170px;
+    height: 40px;
+    margin: 10px 40px 0 0;
+    cursor: pointer;
+    float: left; }
+  header .haitao {
+    float: left; }
+    header .haitao ul {
+      overflow: hidden; }
+      header .haitao ul li {
+        float: left;
+        font: 13px/2 "";
+        color: #666;
+        margin-right: 10px; }
+    header .haitao p {
+      font: 16px/2 '微软雅黑';
+      color: #ed008c;
+      cursor: pointer; }
+
+#in {
+  width: 400px;
+  height: 370px;
+  border: 1px solid #f8f6f6;
+  margin: 40px auto;
+  border-radius: 4px;
+  background: #f7e2ee; }
+  #in span {
+    margin-left: 99px;
+    font: 14px/20px "";
+    color: #666;
+    margin-top: 20px;
+    display: inline-block; }
+  #in h2 {
+    font: 600 20px/20px "";
+    color: #ed008c;
+    text-align: center;
+    margin-top: 20px; }
+  #in input {
+    width: 300px;
+    height: 43px;
+    margin-top: 20px;
+    text-indent: 8px;
+    color: #ccc;
+    border: 0;
+    margin-left: 40px;
+    border-radius: 4px;
+    border-bottom: 1px solid #ccc; }
+  #in code {
+    position: relative; }
+  #in i {
+    position: absolute;
+    left: 724px;
+    top: 278px; }
+    #in i img {
+      display: inline-block;
+      width: 24px;
+      height: 18px; }
+    #in i .dl {
+      width: 318px;
+      height: 50px;
+      font: 20px/50px "";
+      color: #fff;
+      margin-top: 20px;
+      background: #f67fc6;
+      text-align: center;
+      border-radius: 25px;
+      margin-left: 32px; }
+  #in .wx {
+    text-align: center;
+    margin-top: 20px; }
+    #in .wx img {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-left: 25px; }
+
+footer {
+  border-top: 1px solid #f67fc6;
+  margin-top: 20px;
+  font: 12px/1 "";
+  padding-top: 40px;
+  text-align: center; }
+
+footer span {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+footer .foot-b {
+  margin-top: 40px; }
+
+footer img {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 15px; }

@@ -1,0 +1,176 @@
+*{margin: 0;padding: 0}
+.margin{width: 1200px;margin: 0 auto}
+body{
+    background:url(../images/33.jpg) no-repeat;
+}
+header{
+    height: 78px;
+    padding-top: 20px;
+}
+header .logo{
+    width: 170px;
+    height: 40px;
+    margin: 10px 40px 0 0;
+    cursor: pointer;
+    float: left;}
+header .haitao{
+    float: left;
+}
+header .haitao p{
+    font: 16px/2 '微软雅黑';
+    color: #ed008c;
+    cursor: pointer;}
+header .haitao ul{
+    overflow: hidden;
+}
+header .haitao ul li{
+    float: left;font: 13px/2 "";
+    color: #666;
+    margin-right: 10px;
+}
+#login{
+    margin-top: 60px;
+    position: relative;
+}
+#login .lo{
+    width: 318px;
+    margin: 0 auto;
+    padding: 0 16px;
+    position: relative;
+    border:2px solid #f7f3f5;
+    background:#f7e2ee;
+    border-radius: 4px;
+}
+#login .lo p{
+    font:600 20px/3 "";
+    text-align: center;
+    color:#f67fc6;
+}
+#login .lo input{
+    display: block;
+    border: none;
+    width: 318px;
+    height: 22px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    outline:none;
+    text-indent: 5px;
+    margin-bottom: 10px;
+}
+#login .lo span{
+    font:14px/20px "";
+    color:#ccc;
+    margin-left:190px;
+}
+#login .lo span a{
+    color:#f67fc6;
+}
+#login .lo .hide{
+    background: url(../images/hide.png) no-repeat;
+    cursor: pointer;
+    position: absolute;
+    right: 48px;
+    top: 126px;
+    width: 24px;
+    height: 18px;
+    background-size: 100%;
+}
+#login .lo .show{
+    background: url(../images/show.png) no-repeat;
+    position: absolute;
+    cursor: pointer;
+    right: 30px;
+    top: 110px;
+    width: 24px;
+    height: 18px;
+    background-size: 100%;
+    display: none;
+}
+#login .lo .denglu{
+    width: 318px;
+    height: 50px;
+    background: #f67fc6;
+    text-align: center;
+    border-radius: 25px;
+    font: 16px/50px "";
+    color: #fff;
+    margin: 20px 0;
+    cursor: pointer;
+}
+#login .lo .register{
+    width: 318px;
+    height: 32px;
+}
+#login .lo .register a{
+    font: 16px/2 "";
+    color: #333;
+}
+#login .lo .register .reg{
+    float: left;
+}
+#login .lo .register .pas{
+    float: right;
+}
+#login .lo .more{
+    height: 34px;
+    padding: 20px 0;
+}
+#login .lo .more img{
+    width: 34px;
+    height: 34px;
+    margin-left: 45px;
+    cursor: pointer;
+}
+.bb{
+    height: 100px;
+}
+footer{
+    border-top: 1px solid #f67fc6;
+    margin-top: 20px;
+    font: 12px/1 "";
+    padding-top: 40px;
+    text-align: center;
+}
+footer span{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+footer .foot-b{
+    margin-top: 40px;
+}
+footer img{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px
+    ;margin-right: 15px;
+}
+
+#login .tips{
+    width: 300px;
+    height:160px;
+    background: #fff;
+    position: absolute;
+    left: 38%;top:35%;
+    border-radius:8px;
+    display: none;
+    background:#f67fc6;
+}
+
+#login .tips p{
+    font: 18px/3 "";
+    text-align: center;
+    color:#fff;
+}
+#login .tips input{
+    width: 80px;
+    border-radius: 20px;
+    height: 40px;
+    background:  #fff;
+    border: none;
+    margin: 20px auto;
+    display: block;
+    outline: none;
+    cursor: pointer;
+    color: #f67fc6;
+}
+      
