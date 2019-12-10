@@ -1,5 +1,4 @@
 define(()=>{
-
     class denglu1{
         constructor(){
             this.user = document.querySelector("#user");
@@ -11,7 +10,7 @@ define(()=>{
             this.y = false;
             this.msg = localStorage.getItem('up') ? JSON.parse(localStorage.getItem('up')) : [];
             this.init();
-            }
+            } 
             init(){
                 this.user.onblur(()=>{
                         for(var i = 0;i < msg.length;i++){
@@ -37,7 +36,8 @@ define(()=>{
                             op.innerHTML="登录成功";
                             btn.value = "去首页";
                             btn.onclick = function(){
-                                window.location.href = "http://localhost/1908/sasa/index.html";
+                                console.log(1);
+                                window.location.href = "http://localhost:81";
                             }
                         }else{
                             tips.style.display = "block";
@@ -46,5 +46,6 @@ define(()=>{
                 })
             }
     }
-    return denglu1();
+    
+    return denglu1;
 })
