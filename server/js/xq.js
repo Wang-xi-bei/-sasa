@@ -1,12 +1,15 @@
 require.config({
     baseUrl:"module2",
     paths:{
-        x:"xq"
+        x:"xq",
+        g:"gn"
+        
     }
 })
-require(["x"],(d)=>{
+require(["x","g"],(d,n)=>{
     console.log("所有模块加载完成");
     setTimeout(()=>{
-        new d();
+        new n();
     },100);
+    new d();
 });

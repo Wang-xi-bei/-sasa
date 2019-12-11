@@ -6,283 +6,273 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./sass/car.css">
-    <link rel="stylesheet" href="./sass/hom.css">
     <link rel="stylesheet" href="sass/public.css">
 </head>
 <body>
-        <div id="head"></div>
-        <section id="main">
-            <div class="margin">
-                <h2>购物车</h2>
-                <ul class="tab">
-                    <li>商品信息</li>
-                    <li>单价(元)</li>
-                    <li>数量</li>
-                    <li>金额(元)</li>
-                    <li>操作</li>
-                </ul>
-                <div class="ctrl">
-                    <input type="checkbox" id="all">
-                    <p>全选/反选</p>
-                </div>
-                <ul class="information">
-                </ul>
-                <div class="total">
-                    <div class="rg">
-                        <div class="nm">合计：<b>0</b>&nbsp;&nbsp;件商品&nbsp;&nbsp;&nbsp;共计&nbsp;&nbsp;&nbsp;<em>0</em>&nbsp;&nbsp;&nbsp;元</div><input type="button" class="btnpayment" value="立即付款">
-                    </div>
-                </div>
+<div id="head"></div>
+<section id="satop" >
+    <div class="margin"> 
+        <div class="satop-l">
+            <b><a href="index.html">Hi，欢迎来到莎莎网</a></b>
+            <div class="log">
+                &nbsp;&nbsp;&nbsp;<a href="denglu.html" class="login">登录</a><a href="zhuce.html" class="register">注册</a>
             </div>
+            <div class="inlog">
+                <b>欢迎</b>
+                <button id="out">退出</button>
+            </div>
+        </div>
+        <div class="satop-r">
+            <ul>
+                <li class="account">
+                    <a href="#">我的账户</a><img src="images/xiajian.png" alt="" class="xj">
+                    <ul>
+                        <li><a href="#">我的积分</a></li>
+                        <li><a href="#">我的优惠卷</a></li>
+                        <li><a href="#">我的收藏</a></li>
+                        <li><a href="#">我的评价</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">积分中心</a></li>
+                <li><a href="#">在线客服</a></li>
+                <li><a href="#">Global site</a></li>
+                <li class="about">
+                    <a href="#">关注我们</a><img src="images/xiajian.png" alt="" class="xj">
+                    <ul>
+                        <li>
+                            <img src="images/qr1.png" alt="">
+                            <p>莎莎官方微信</p>
+                            <p>ID:237492342</p>
+                        </li>
+                        <li>
+                            <img src="images/qr2.png" alt="">
+                            <p>莎莎官方微博</p>
+                            <p>@莎莎网</p>
+                        </li>
+                        <li>
+                            <img src="images/qr3.png" alt="">
+                            <p>香港莎莎</p>
+                            <p>官方小程序商城</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<header class="margin">
+        <div class="header-l">
+            <img src="images/logo.png" class="logo" alt="">
+            <div class="haitao">
+                <p>香港莎莎 官方自营 正货海淘</p>
+                <ul>
+                    <li><img src="images/zi.png" alt="">官方自营</li>
+                    <li><img src="images/zheng.png" alt="">正货担保</li>
+                    <li><img src="images/dun.png" alt="">30天售后服务</li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-r">
+            <div class="biaodan">
+                <form action="#">
+                    <input type="text" id="txt" placeholder="防晒">
+                    <div class="search">
+                        <img src="images/search.png" alt="">
+                    </div>
+                </form>
+                <ul>
+                    <li>面膜</li>
+                    <li>伊丽莎白 · 雅顿</li>
+                    <li>SK-II</li>
+                    <li>口红</li>
+                    <li>安热沙</li>
+                    <li>香水</li>
+                    <li>雅诗兰黛</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+<section id="main" >
+    <div class="margin">
+        <h2>购物车</h2>
+        <table  width="1200px" border="0">
+            <thead>
+                <tr height="60">
+                    <th width="69">全选<input type="checkbox" ></th>
+                    <th colspan="3" width="270">商品</th>
+                    <th width="142">销售价</th>
+                    <th width="142">小计</th>
+                    <th width="182">数量</th>
+                    <th width="142">操作</th>
+                </tr>
+            </thead>
+            <tbody text-align="center">
+                <tr height="100">
+                    <td><input type="checkbox" class="ck"></td>
+                    <td width="80"><img src="../img/img3.jpg" alt=""></td>
+                    <td>Tumi 塔米/途明 Alpha Bravo系列 Travis 男士单肩斜挎包 103295 双色可选</td>
+                    <td width="180">颜色：Black</td>
+                    <td>￥1900.00</td>
+                    <td class="price">￥411865.00</td>
+                    <td><input type="number" class="num" min="1" value="1"></td>
+                    <td class="delete">删除</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr height="60">
+                    <td></td>
+                    <td colspan="3"></td>
+                    <td>已选择<span class="number">0</span>件</td>
+                    <td colspan="2">总价：<span class="price">0.000</span></td>
+                    <td><span class="jiesuan">去结算</span></td>
+                </tr>
+            </tfoot>
+        </tbody>
+        </table>
+    </div>
+    <section id="enjoy" class="margin">
+            <div class="title">
+                猜你喜欢
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/like.jpg" class="like" alt="">
+                        <div class="ba">
+                            <span>￥89</span><b>￥228</b><em>欧美</em>
+                        </div>
+                        <p>贝德玛 舒妍多效洁肤液</p>
+                        <i>国内保税仓</i>
+                        <i>两件优惠价</i>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <img src="images/like.jpg" class="like" alt="">
+                        <img src="images/new.png" class="new" alt="">
+                        <div class="ba">
+                            <span>￥89</span><b>￥228</b><em>欧美</em>
+                        </div>
+                        <p>贝德玛 舒妍多效洁肤液</p>
+                        <i>国内保税仓</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/like.jpg" class="like" alt="">
+                        <img src="images/new.png" class="new" alt="">
+                        <div class="ba">
+                            <span>￥89</span><b>￥228</b><em>欧美</em>
+                        </div>
+                        <p>贝德玛 舒妍多效洁肤液</p>
+                        <i>国内保税仓</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/like.jpg" class="like" alt="">
+                        <img src="images/new.png" class="new" alt="">
+                        <div class="ba">
+                            <span>￥89</span><b>￥228</b><em>欧美</em>
+                        </div>
+                        <p>贝德玛 舒妍多效洁肤液</p>
+                        <i>国内保税仓</i>
+                    </a>
+                </li>
+                <li>
+                        <a href="#">
+                            <img src="images/like.jpg" class="like" alt="">
+                            <img src="images/new.png" class="new" alt="">
+                            <div class="ba">
+                                <span>￥89</span><b>￥228</b><em>欧美</em>
+                            </div>
+                            <p>贝德玛 舒妍多效洁肤液</p>
+                            <i>国内保税仓</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/like.jpg" class="like" alt="">
+                            <img src="images/new.png" class="new" alt="">
+                            <div class="ba">
+                                <span>￥89</span><b>￥228</b><em>欧美</em>
+                            </div>
+                            <p>贝德玛 舒妍多效洁肤液</p>
+                            <i>国内保税仓</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/like.jpg" class="like" alt="">
+                            <img src="images/new.png" class="new" alt="">
+                            <div class="ba">
+                                <span>￥89</span><b>￥228</b><em>欧美</em>
+                            </div>
+                            <p>贝德玛 舒妍多效洁肤液</p>
+                            <i>国内保税仓</i>
+                        </a>
+                    </li>
+                <li>
+                    <a href="#">
+                        <img src="images/like.jpg" class="like" alt="">
+                        <img src="images/new.png" class="new" alt="">
+                        <div class="ba">
+                            <span>￥89</span><b>￥228</b><em>欧美</em>
+                        </div>
+                        <p>贝德玛 舒妍多效洁肤液</p>
+                        <i>国内保税仓</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/like.jpg" class="like" alt="">
+                        <img src="images/new.png" class="new" alt="">
+                        <div class="ba">
+                            <span>￥89</span><b>￥228</b><em>欧美</em>
+                        </div>
+                        <p>贝德玛 舒妍多效洁肤液</p>
+                        <i>国内保税仓</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/like.jpg" class="like" alt="">
+                        <img src="images/new.png" class="new" alt="">
+                        <div class="ba">
+                            <span>￥89</span><b>￥228</b><em>欧美</em>
+                        </div>
+                        <p>贝德玛 舒妍多效洁肤液</p>
+                        <i>国内保税仓</i>
+                    </a>
+                </li>
+            </ul>
         </section>
-        <div id="foot"></div>
+</section>
+    <div id="foot"></div>
     </body>
     <script src="js/ajax.js"></script>
     <script src="js/cookie.js"></script>
     <script src="js/jquery.js"></script>
-    <script >
-      $("#head").load("head.html")
-    $("#foot").load("foot.html")
-
-    class Car{
-        constructor(){
-            this.url = "http://localhost/data.json";
-            this.inform = document.querySelector(".information");
-            this.all = document.getElementById("all");
-            this.btn = document.querySelector(".rg .btnpayment");
-            this.x = 1;
-            this.load();
-            this.addEvent();
+    <script src="libs/require.js" data-main="js/car.js"></script> 
+        <script>
+        
+        if(localStorage.getItem("up")){
+            $(".log").hide()
+            $(".inlog").show()
+            var c = localStorage.getItem("up");
+            var json = JSON.parse(c)
+            $(".inlog").find("b").html("欢迎 " + json[0].user)
+        }else{
+            $(".log").show()
+            $(".inlog").hide()
         }
-
-        load(){
-            ajaxGet(
-                this.url,
-                (res)=>{
-                this.res=JSON.parse(res);
-                // console.log(res);
-                   this.display();
-                }
-            )
-               
-        }
-
-        getCookie(){
-            this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
-            this.display();
-        }
-
-        display(){
-            var str = "";
-            for(var i = 0;i < this.res.length;i++){
-                for(var j = 0;j < this.goods.length;j++){
-                    //当ajax数据和Cookie数据一一对应的时候开始拼接
-                    if(this.res[i].goodsId == this.goods[j].id){
-                        var numt = (this.res[i].price)*(this.goods[j].num);
-                        str += `<li index="${this.goods[j].id}">
-                                    <input type="checkbox" class="single"/>
-                                    <img src="${this.res[i].img}">
-                                    <div class="bt">${this.res[i].name}</div>
-                                    <div class="pirce">${this.res[i].price}</div>
-                                    <div class="num">
-                                        <span class="reduce">-</span>
-                                        <input type="tel" name="" class="numt"  value="${this.goods[j].num}">
-                                        <span class="plus">+</span>
-                                    </div>
-                                    <div class="spirce">${numt}</div>
-                                    <div class="remove">删除</div>
-                                </li>`;
-                    }
-                }
-            }
-            this.inform.innerHTML = str;
-        }
-
-        addEvent(){
-            var that = this;
-            that.x = 0;
-            //删除
-            this.inform.addEventListener("click",function(eve){
-                var e = eve || window.event;
-                var target = e.target || e.srcElement;
-                if(target.className == "remove"){
-                    that.id = target.parentNode.getAttribute("index");
-                    target.parentNode.remove();
-                    that.removeCookie();
-                }
-            })
-            //修改
-            this.inform.addEventListener("input",function(eve){
-                var e = eve || window.event;
-                var target = e.target || e.srcElement;
-                if(target.type == "tel"){
-                    if(target.value <= 0){
-                        target.value = 1;
-                    }
-                    that.id = target.parentNode.parentNode.getAttribute("index");
-                    //把当前number输入框内的value保存下来
-                    that.val = target.value;
-                    // 同时改变总价
-                    var spr = target.parentNode.nextElementSibling;
-                    var pr = target.parentNode.previousElementSibling;
-                    spr.innerHTML = that.val*pr.innerHTML;
-                    //修改Cookie数据，以免刷新页面的时候Cookie数据没有跟当时number输入框里面的value值对应
-                    that.updateCookie();
-                }
-            })
-            //减
-            this.inform.addEventListener("click",function(eve){
-                var e = eve || window.event;
-                var target = e.target || e.srcElement;
-                if(target.className == "reduce"){
-                    that.id = target.parentNode.parentNode.getAttribute("index");
-                    var val = target.nextElementSibling;
-                    if(val.value <= 1){
-                        that.val = 1;
-                    }else{
-                        that.val = --val.value;
-                    }
-                    target.nextElementSibling.value = that.val;
-                    // 同时改变总价
-                    var spr = target.parentNode.nextElementSibling;
-                    var pr = target.parentNode.previousElementSibling;
-                    spr.innerHTML = that.val*pr.innerHTML;
-                    that.updateCookie();
-                }
-            })
-            //加
-            this.inform.addEventListener("click",function(eve){
-                var e = eve || window.event;
-                var target = e.target || e.srcElement;
-                document.onselectstart = function(){return false;}
-                if(target.className == "plus"){
-                    that.id = target.parentNode.parentNode.getAttribute("index");
-                    var val = target.previousElementSibling;
-                    if(val.value >= 99){
-                        that.val = 99;
-                    }else{
-                        that.val = ++val.value;
-                    }
-                    target.previousElementSibling.value = that.val;
-                    // 同时改变总价
-                    var spr = target.parentNode.nextElementSibling;
-                    var pr = target.parentNode.previousElementSibling;
-                    spr.innerHTML = that.val*pr.innerHTML;
-                    that.updateCookie();
-                }
-            })
-            //单选
-            this.inform.addEventListener("click",function(eve){
-                var e = eve || window.event;
-                var target = e.target || e.srcElement;
-                if(target.className == "single"){
-                    if(target.checked == true){
-                        var ob = document.querySelector(".nm b");
-                        var oem = document.querySelector(".nm em");
-                        var obt = ob.innerHTML;
-                        var oemt = oem.innerHTML;
-                        var num = target.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.value;
-                        var pr = target.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML;
-                        ob.innerHTML = (num-0)+(obt-0);
-                        oem.innerHTML = ((num-0)*(pr-0))+(oemt-0);
-                        that.id = target.parentNode.parentNode.getAttribute("index");
-                    }
-                    if(target.checked == false){
-                        var ob = document.querySelector(".nm b");
-                        var oem = document.querySelector(".nm em");
-                        var obt = ob.innerHTML;
-                        var oemt = oem.innerHTML;
-                        var num = target.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.value;
-                        var pr = target.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML;
-                        ob.innerHTML = (obt-0)-(num-0);
-                        oem.innerHTML = (oemt-0)-((num-0)*(pr-0));
-                    }
-                }
-            })
-            //全选，反选
-            this.all.onclick = function(){
-                var at = document.querySelectorAll(".single");
-                if(that.x){
-                    for(var i=0;i<at.length;i++){
-                        at[i].checked = false;
-                    }
-                    var ob = document.querySelector(".nm b");
-                    var oem = document.querySelector(".nm em");
-                    ob.innerHTML = 0;
-                    oem.innerHTML = 0;
-                    that.x = 0;
-                }else{
-                    for(var i=0;i<at.length;i++){
-                        at[i].checked = true;
-                    }
-                    var ob = document.querySelector(".nm b");
-                    var oem = document.querySelector(".nm em");
-                    var num = document.querySelectorAll(".numt")
-                    var spr = document.querySelectorAll(".spirce");
-                    var a = 0;
-                    var b = 0;
-                    for(var i=0;i<num.length;i++){
-                        a = a+(num[i].value-0);
-                    }
-                    for(var i=0;i<spr.length;i++){
-                        b = b+(spr[i].innerHTML-0);
-                    }
-                    ob.innerHTML = a;
-                    oem.innerHTML = b;
-                    that.x = 1;
-                }
-            }
-            this.btn.onclick = function(){
-                var price = document.querySelector(".rg em").innerHTML;
-                // console.log(price)
-                if(price == 0){
-                    alert("请选择商品后再付款")
-                }else{
-                    if(localStorage.getItem("up")){
-                        var con;
-                        con = confirm("现在去提交订单");
-                        if(con){
-                            var msg = localStorage.getItem('total') ? JSON.parse(localStorage.getItem('total')) : [];
-                            msg.push({
-                                zj : price
-                            });
-                            localStorage.setItem('total',JSON.stringify(msg));
-                            window.location.href = "http://www.baidu.com"
-                        }
-                    }else{
-                        alert("请登录后再付款")
-                    }
-                    
-                }
-                
-            }
-        }
-        removeCookie(){
-            var i = 0;
-            var onoff = this.goods.some((val,index)=>{
-                i = index;
-                return val.id == this.id;
-            })
-            if(onoff){
-                this.goods.splice(i,1)
-            }
-            setCookie("goods",JSON.stringify(this.goods))
-        }
-
-        updateCookie(){
-            var i = 0;
-            var onoff = this.goods.some((val,index)=>{
-                i = index;
-                return val.id == this.id;
-            })
-            if(onoff){
-                //把当前number输入框的value给Cookie数据中的num
-                this.goods[i].num = this.val;
-            }
-            setCookie("goods",JSON.stringify(this.goods));
-        }
-    }
-    new Car();
-</script>
     
+        $("#out").on("click",function(){
+            localStorage.removeItem("up");
+            $(".log").show();
+            $(".inlog").hide();
+        })
+    </script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 define(()=>{
     class xq{
          constructor(){    
-            
             this.tm=document.querySelector("#tm");
            // this.yy=document.querySelector(".xq bb ul li");
             this.url = "http://localhost:81/js/data.json"
@@ -20,15 +19,18 @@ define(()=>{
         }
         display(){
             let u = location.search;
+            if(location.search == ""){
+                location.href="index.html";
+            }
 
             const reg = /id=(\d+)/
             let index = reg.exec(u)[1]
-            console.log(index)
+            // console.log(index)
             let str = "";
             for(var i=0;i<this.res.length;i++){
                 if(this.res[i].goods_id  == index){
                     str+=`
-                    <div class="box">
+                    <div class="box" index="${this.res[i].goods_id}">
                     <div class="sBox">
                             <img src="${this.res[i].goods_big_logo}"/>
                             <span></span>
@@ -52,7 +54,7 @@ define(()=>{
                                     <input tyle="text" value="1"/>
                                 </li>
                             </ul>
-                            <a href="#">加入购物车</a>
+                            <a href="#" class="car">加入购物车</a>
                     </div> `
                 }
                
