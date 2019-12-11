@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/homePage.css">
+    <link rel="stylesheet" href="css/xiangqing.css">
+    <title>商品详情</title>
+</head>
+<body>
+    <div id="head"></div>
+    <section id="details" class="margin">
+        <div class="head"><b>首页</b><span>></span><b>面部护肤</b></div>
+        <div class="cont">
+            <p style="font-size: 24px;text-align: center;font-weight: 700;height: 300px;line-height: 300px;">资源加载失败，请刷新后重试</p>
+        </div>
+    </section>
+    <div id="foot"></div>
+</body>
+    <script src="js/jquery.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/cookie.js"></script>
+    <script>
+            $("#head").load("head.html")
+            $("#foot").load("footer.html")
+    </script>
+    <script>
+        //跳转首页
+        $(".logo").on("click",function(){
+            window.location.href = 'http://localhost/1908/sasa/index.html';
+        })
+
+        class Shop1{
+            constructor(){
+                this.url = "http://localhost/1908/sasa/data/shouye.json";
+                this.cont = document.querySelector('.cont');
+
+                this.load();
+                this.addEvent();
+            }
+            load(){
+                ajax({
+                    url:this.url,
+                    success:res=>{
+                        this.res = JSON.parse(res);
+                        
+                        this.display()
+                    }
+                })
+            }
+            display(){
+                var str = "";
+                // console.log(this.res[0].goodsId)
+                str = `<div class="box" index="${this.res[0].goodsId}">
+                                <div class="sbox">
+                                    <img src="${this.res[0].img}" alt="">
+                                    <span></span>
+                                </div>
+                                <div class="bbox">
+                                    <img src="${this.res[0].img}" alt="">
+                                </div>
+                                <div class="bright">
+                                    <div class="title">
+                                        <img src="https://www.hksasa.cn/media/sasa/countryicon/_2x_4.png">
+                                        <b>欧美品牌</b>
+                                        <span>|</span>
+                                        <b>兰蔻 Lancome</b>
+                                    </div>
+                                    <h4>${this.res[0].name}</h4>
+                                    <p>改善暗淡松散的肤质，柔化色点，面部重获年轻的轮廓</p>
+                                    <div class="temai">今日特卖</div>
+                                    <div class="price">
+                                        <b>售价</b>
+                                        <span>￥${this.res[0].price}.00</span>
+                                    </div>
+                                    <div class="cc">
+                                         <b>配送</b>
+                                         <span>国内保税仓，保税仓运送时间为2-5个工作天</span>
+                                    </div>
+                                    <div class="cc">
+                                         <b>运费</b>
+                                         <span>保税仓商品¥168以下订单需要加¥10运费</span>
+                                    </div>
+                                    <div class="cc">
+                                         <b>税费</b>
+                                         <span>预估税费￥ 26.21,实际税费请依据提交订单为准</span>
+                                    </div>
+                                    <div class="cc">
+                                         <b>服务</b>
+                                         <span>30日退换保证</span><i></i>
+                                         <span>价格承诺</span><i></i>
+                                         <span>正火担保</span>
+                                    </div>
+                                    <input type="button" value="加入购物车" class="add">
+                                </div>
+                            </div>`
+                this.cont.innerHTML = str;
+            }
+            
+            
+            addEvent(){
+                var that = this;
+                this.cont.addEventListener("click",function(eve){
+                    var e = eve || window.event;
+                    var target = e.target || e.srcElement;
+                    if(target.className == "add"){
+                        that.id = target.parentNode.parentNode.getAttribute("index");
+                        that.setCookie();
+                    }
+                })
+            }
+
+            setCookie(){
+                //拿到cookie数据
+                this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+                //判断是否第一次点击
+                if(this.goods.length < 1){
+                    this.goods.push({
+                        id:this.id,
+                        num:1
+                    })
+                }else{
+                    //判断点击次数
+                    var onoff = 1;
+                    for(var i = 0;i < this.goods.length;i++){
+                        if(this.goods[i].id == this.id){
+                            this.goods[i].num++;
+                            onoff = 0;
+                        }
+                    }
+                    if(onoff == 1){
+                        this.goods.push({
+                            id:this.id,
+                            num:1
+                        })
+                    }
+                }
+                //设置cookie数据
+                setCookie("goods",JSON.stringify(this.goods));
+            }
+        }
+        new Shop1();
+    </script>
+    <script src="js/magnifier.js"></script>
+    <script>
+        window.onload = function(){
+            new Magnifier();
+            var add = document.querySelector(".add")
+            add.onclick = function(){
+                alert("添加购物车成功")
+            }
+        }
+    </script>
+</html>

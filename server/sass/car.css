@@ -1,0 +1,29 @@
+#main{background: #f6f6f6;padding-bottom: 40px;}
+
+#main h2{font: 700 20px/3 "";color: #000;text-indent: 10px;}
+
+#main .tab{background: #fff;height: 50px;border-radius: 10px;}
+#main .tab li{float: left;font: 13px/50px "";color: #aaa;text-align: center;width: 120px;}
+#main .tab li:nth-child(1){width: 700px;}
+
+#main .ctrl{background: #fff;height: 50px;border-radius: 10px 10px 0 0;margin-top: 10px;font: 16px/50px "";color: #000;}
+#main .ctrl #all{width: 16px;height: 16px;border: 1px solid #000;border-radius: 10px;float: left;margin: 15px;}
+#main .ctrl p{float: left;}
+
+#main .information{border-radius: 0 0 10px 10px;margin-top: 2px;}
+#main .information li{overflow: hidden;background: #fff;margin-bottom: 2px;}
+#main .information li *{float: left;}
+#main .information li .single{display:block;margin: 40px 15px;width: 16px;height: 16px;border: 1px solid #000;border-radius: 10px;}
+#main .information li img{width: 100px;height: 100px;margin-right: 75px}
+#main .information li .bt{width: 400px;font: 12px/80px "";text-indent: 20px;margin-right: 80px}
+#main .information li .pirce,.spirce{width: 120px;text-align: center;font:700 18px/80px "";color: #ed008c;}
+#main .information li .num{width: 70px;padding: 30px 20px;}
+#main .information li .num .numt{width: 2.375rem;height: 1.25rem;border-radius: .625rem;background: #f6f6f6;border: none;outline: none;text-align: center;font-size: .75rem;color: #333;padding: .125rem .4375rem;box-sizing: border-box;margin: 0 .4375rem;}
+#main .information li .num span{cursor: pointer;font-size: 16px;}
+#main .information li .remove{margin:25px 0 0 30px;width: 60px;height: 30px;background: #ed008c;color: #fff;text-align: center;font: 16px/30px "";cursor: pointer;}
+
+#main .total{width: 100%;height: 60px;background: #fff;border-radius: 10px;margin-top: 10px;}
+#main .total .rg{float: right;font: 14px/60px "";}
+#main .total .rg .nm{float: left;}
+#main .total .rg .nm b,em{font: 700 16px/60px "";color: #ed008c;}
+#main .total .rg .btnpayment{width: 100px;height: 50px;background: #ed008c;color: #fff;font: 16px/50px "";text-align: center;border: none;outline: none;border-radius: 15px;margin: 5px 20px;cursor: pointer;float: left;display: block}

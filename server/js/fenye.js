@@ -1,11 +1,11 @@
 require.config({
     baseUrl:"module1",
-    path:{
-        denglu:"deng",
-       
+    paths:{
+        fy:"fy"
     }
 })
-require(["deng"],(d)=>{
+require(["fy"],(c)=>{
     console.log("所有模块加载完成");
-    new d();
-})
+    new c();
+
+});
