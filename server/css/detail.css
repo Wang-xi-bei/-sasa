@@ -189,102 +189,102 @@ header {
       color: #ed008c;
       text-indent: 20px; }
 
-#tm .sy {
-  font-size: 16px; }
-
-#tm .box {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  float: left; }
-  #tm .box .sBox {
+#tm {
+  overflow: hidden; }
+  #tm .box {
+    position: relative;
     width: 400px;
     height: 400px;
-    position: absolute;
-    left: 50px;
-    top: 32px; }
-    #tm .box .sBox img {
-      display: block;
+    float: left; }
+    #tm .box .sBox {
       width: 400px;
       height: 400px;
-      border: 1px solid #ccc; }
-    #tm .box .sBox span {
-      background: #99f;
-      background-size: 400px 300px;
       position: absolute;
-      left: 0;
+      left: 50px;
+      top: 32px; }
+      #tm .box .sBox img {
+        display: block;
+        width: 400px;
+        height: 400px;
+        border: 1px solid #ccc; }
+      #tm .box .sBox span {
+        background: #ccc;
+        opacity: 0.6;
+        background-size: 400px 300px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none; }
+    #tm .box .bBox {
+      width: 400px;
+      height: 300px;
+      position: absolute;
+      left: 110%;
       top: 0;
+      overflow: hidden;
       display: none; }
-  #tm .box .bBox {
-    width: 400px;
-    height: 300px;
-    position: absolute;
-    left: 110%;
-    top: 0;
-    overflow: hidden;
-    display: none; }
-    #tm .box .bBox img {
-      width: 1200px;
-      height: 900px;
-      position: absolute;
-      left: 0;
-      top: 0; }
-
-#tm .m-r {
-  float: left;
-  margin-left: 90px;
-  margin-top: 30px; }
-  #tm .m-r .bb {
-    font: 600 16px/20px ""; }
-  #tm .m-r p {
-    font-size: 14px; }
-  #tm .m-r div {
-    width: 400px;
-    height: 30px;
+      #tm .box .bBox img {
+        width: 1200px;
+        height: 900px;
+        position: absolute;
+        left: 0;
+        top: 0; }
+  #tm .m-r {
+    float: left;
+    margin-left: 100px;
+    margin-top: 30px; }
+    #tm .m-r .bb {
+      font: 600 16px/20px ""; }
+    #tm .m-r p {
+      font-size: 14px;
+      margin-top: 10px; }
+    #tm .m-r div {
+      width: 600px;
+      height: 30px;
+      background: #ec3e7c;
+      color: #fff;
+      line-height: 30px;
+      margin-top: 30px; }
+    #tm .m-r span {
+      display: inline-block;
+      width: 600px;
+      height: 60px;
+      background: #dbd2d2;
+      line-height: 60px;
+      font: 600 18px/60px "";
+      color: #ec3e7c;
+      margin-bottom: 30px; }
+      #tm .m-r span i {
+        font-size: 12px;
+        color: #666; }
+    #tm .m-r ul {
+      overflow: hidden; }
+      #tm .m-r ul li {
+        font: 12px/20px "";
+        color: #666;
+        margin-top: 10px; }
+        #tm .m-r ul li b {
+          margin-left: 40px; }
+        #tm .m-r ul li input {
+          display: inline-block;
+          width: 60px;
+          height: 20px;
+          margin-left: 40px;
+          text-align: center; }
+  #tm a {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
     background: #ec3e7c;
     color: #fff;
-    line-height: 30px;
-    margin-top: 30px; }
-  #tm .m-r span {
-    display: inline-block;
-    width: 400px;
-    height: 60px;
-    background: #dbd2d2;
-    line-height: 60px;
-    font: 600 18px/60px "";
-    color: #ec3e7c;
-    margin-bottom: 30px; }
-    #tm .m-r span i {
-      font-size: 12px;
-      color: #666; }
-  #tm .m-r ul {
-    overflow: hidden; }
-    #tm .m-r ul li {
-      font: 12px/20px "";
-      color: #666;
-      margin-top: 10px; }
-      #tm .m-r ul li b {
-        margin-left: 40px; }
-      #tm .m-r ul li input {
-        display: inline-block;
-        width: 60px;
-        height: 20px;
-        margin-left: 40px;
-        text-align: center; }
-
-#tm a {
-  display: inline-block;
-  width: 200px;
-  height: 50px;
-  background: #ec3e7c;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  line-height: 50px;
-  margin-top: 20px;
-  font-size: 16px; }
+    border-radius: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    font-size: 16px; }
 
 #enjoy .title {
+  overflow: hidden;
   font: 28px/134px "";
   text-align: center;
   height: 134px;

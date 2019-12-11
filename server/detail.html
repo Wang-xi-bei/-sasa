@@ -91,17 +91,18 @@
                     <li>雅诗兰黛</li>
                 </ul>
             </div>
-            <a href="#" class="shop">
+            <a href="car.html" class="shop">
                 <img src="images/shop.png" alt="">
                 购物车
             </a>
         </div>
     </header>
 <section id="tm" class="margin">
-    <div class="sy">
+    
+<!-- <div class="sy">
         首页>面部护肤>控油持妆隔离妆前儒 SPF16 PA++
-    </div>
-    <div class="box">
+    </div>  -->
+  <!-- <div class="box">
         <div class="sBox">
                 <img src="https://www.hksasa.cn/media/catalog/product/cache/9bb9d677791f8666003e194c8a94aeff/3/6/361774a07e11fe850ba6b986aa86491472022fa1.jpg"/>
                 <span></span>
@@ -127,9 +128,12 @@
                     </li>
                 </ul>
                 <a href="#">加入购物车</a>
-        </div>
- 
-<!-- </section>
+        </div>  -->
+  
+
+   
+    
+</section>
 <section id="enjoy" class="margin">
         <div class="title">
             猜你喜欢
@@ -145,8 +149,8 @@
                     <i>国内保税仓</i>
                     <i>两件优惠价</i>
                 </a>
-            </li> -->
-            <!-- <li>
+            </li> 
+            <li>
                 <a href="#">
                     <img src="images/like.jpg" class="like" alt="">
                     <img src="images/new.png" class="new" alt="">
@@ -244,14 +248,15 @@
                     <p>贝德玛 舒妍多效洁肤液</p>
                     <i>国内保税仓</i>
                 </a>
-            </li> -->
+            </li>
         </ul>
     </section>
 <script src="js/public.js"></script>
 <script src="js/move.js"></script>
 <script src="js/ajax.js"></script>
 <script src="js/jquery.js"></script>
-<!-- <script src="libs/require.js" data-main="js/fenye.js"></script> -->
+
+<script src="libs/require.js" data-main="js/xq.js"></script>
 <script>
     if(localStorage.getItem("up")){
         $(".log").hide()
@@ -288,8 +293,9 @@ class Magnifier{
     }
     init(){
         var that=this;
+      
         this.sBox.onmouseover=function(){
-
+         
             that.over();
         }
         this.sBox.onmousemove=function(eve){
@@ -344,9 +350,6 @@ class Magnifier{
         this.bImg.style.top=t/(this.sH-this.sSpanH)*(this.bH-this.bImgH)+"px";
         this.sSpan.style.backgroundPositionX=-l+"px";
         this.sSpan.style.backgroundPositionY=-t+"px";
-        
-
-
     }
     out(){
 
@@ -358,6 +361,55 @@ class Magnifier{
 new Magnifier();
 
 </script>
+<script>
+// define(()=>{
+//     'use strict';
+//     class List {
+//         constructor() {
+//             this.box = document.querySelector('main .box-fix');
+//             this.add = document.querySelector('main .add');
+//             this.num = document.querySelector('.num .num');
+//             this.addEvent();
+//         }
+//         addEvent(){
+//             this.add.onclick = ()=>{
+//                 console.log(this.num.value)
+//                 this.id = this.box.getAttribute("index");
+//                 this.setCookie();
+//             }
+//         }
+//         setCookie(){
+//             this.goods = getCookie("goodsCookie") ? JSON.parse(getCookie("goodsCookie")) : [];
+// 				if(this.goods.length < 1 ){
+// 					this.goods.push({
+// 						id:this.id,
+// 						num:this.num.value/1
+//                     })
+//                     alert("加入成功，快去结算吧")
+// 				}else{
+// 					var onoff = true;
+// 					for(var i = 0;i<this.goods.length;i++){
+// 						if(this.goods[i].id == this.id){
+// 							this.goods[i].num+=this.num.value/1;
+// 							onoff = false;
+// 						}
+// 					}
+// 					if(onoff){
+// 						this.goods.push({
+// 							id:this.id,
+// 							num:this.num.value/1
+// 						})
+//                     }
+//                     alert("加入成功，快去结算吧")
+// 				}
+// 				setCookie("goodsCookie",JSON.stringify(this.goods),{
+//                     path:"/"
+//                 });
+//         }
+//     }
+//     return List;
+// });
+// </script>
 
    
 </body>

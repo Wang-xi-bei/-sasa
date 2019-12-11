@@ -15,8 +15,6 @@ define(()=>{
             this.enjoy=document.querySelector("#enjoy ul");
             this.li4=document.querySelector("#enjoy ul li");
            
-            // console.log(this.enjoy);
-            //商品分类
           
 
             this.load();
@@ -33,7 +31,7 @@ define(()=>{
                    this.display2();
                    this.display3();
                    this.display4();
-                   this.display5();
+                   
                 }
             )
         }
@@ -42,7 +40,7 @@ define(()=>{
             let str = "";
                 for(var i=0;i<4;i++){
                     str+=`
-                        <a href="#">
+                        <a href="detail.html?id=${this.res[i].goods_id}">
                             <ul>
                                 <li>
                                     <img src="${this.res[i].goods_big_logo}"/>
@@ -63,7 +61,7 @@ define(()=>{
                 for(var i=4;i<12;i++){
                     // console.log(this.res[i]);
                     str+=`
-                        <a href="#">
+                        <a href="detail.html?id=${this.res[i].goods_id}">
                             <ul>
                                 <li>
                                     <img src="${this.res[i].goods_big_logo}" alt="">
@@ -81,7 +79,7 @@ define(()=>{
                 for(var i=12;i<20;i++){
                     // console.log(this.res[i]);
                     str+=`
-                        <a href="#">
+                        <a href="detail.html?id=${this.res[i].goods_id}">
                             <ul>
                                 <li>
                                     <img src="${this.res[i].goods_big_logo}" alt="">
@@ -98,7 +96,7 @@ define(()=>{
             let str = "";
             for(var i=20;i<30;i++){
                 str+=`
-                    <a href="#">
+                    <a href="detail.html?id=${this.res[i].goods_id}">
                 
                         <li>
                             <img src="${this.res[i].goods_big_logo}">

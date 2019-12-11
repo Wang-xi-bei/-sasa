@@ -23,7 +23,7 @@ define(()=>{
             let str = "";
             for(var i=0;i<40;i++){
                 str+=`
-                    <a href="#">
+                    <a href="detail.html?id=${this.res[i].goods_id}">
                         <li>
                             <img src="${this.res[i].goods_big_logo}">
                             <div class="ba">
