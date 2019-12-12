@@ -83,15 +83,24 @@ header .header-r .shop{float: right;width: 106px;height:34px;border: 2px solid #
         #main table tbody td.delete {
           cursor: pointer; }
         #main table tbody td input {
-          vertical-align: middle; }
+          vertical-align: middle;
+          text-align: center;
+        
+        }
         #main table tbody td input.num {
           width: 40px; }
     #main table tfoot {
       background: #fff; }
       #main table tfoot tr td {
-        text-align: center; }
+        text-align: center;
+        color:#777;
+        font-size:16px;
+       }
         #main table tfoot tr td span {
-          color: #f99; }
+            color:  #ed008c;
+          font-size:16px;
+        
+        }
           #main table tfoot tr td span.jiesuan {
             display: block;
             height: 60px;
@@ -100,7 +109,8 @@ header .header-r .shop{float: right;width: 106px;height:34px;border: 2px solid #
             color: #fff;
             background: #ed008c;
             border-radius: 50px;
-            cursor: pointer; }
+            cursor: pointer;
+           }
 
 #enjoy .title{font: 28px/134px "";text-align: center;height: 134px;position: relative;}
 #enjoy .title::before{content: "";position: absolute;width: 136px;height: 1px;background: #ccc;top: 71px;left: 30%;}

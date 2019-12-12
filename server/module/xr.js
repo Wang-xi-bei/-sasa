@@ -43,7 +43,7 @@ define(()=>{
                         <a href="detail.html?id=${this.res[i].goods_id}">
                             <ul>
                                 <li>
-                                    <img src="${this.res[i].goods_big_logo}"/>
+                                    <img lazySrc="${this.res[i].goods_big_logo}"/>
                                     <p>${this.res[i].goods_name}</p>
                                     <b>￥${this.res[i].goods_number}</b><i>￥${this.res[i].goods_price}</i>
                                     <span>马上抢</span>
@@ -53,8 +53,9 @@ define(()=>{
                          `
                 }
                 
-                console.log(this.cont)
+               // console.log(this.cont)
                 this.cont.innerHTML=str;
+                
         }
         display2(){
             let str = "";
@@ -64,7 +65,7 @@ define(()=>{
                         <a href="detail.html?id=${this.res[i].goods_id}">
                             <ul>
                                 <li>
-                                    <img src="${this.res[i].goods_big_logo}" alt="">
+                                    <img lazySrc="${this.res[i].goods_big_logo}" alt="">
                                     <p>${this.res[i].goods_name}</p>
                                     <span>￥${this.res[i].goods_number}</span><b>￥${this.res[i].goods_price}</b>
                                 </li>
@@ -82,7 +83,7 @@ define(()=>{
                         <a href="detail.html?id=${this.res[i].goods_id}">
                             <ul>
                                 <li>
-                                    <img src="${this.res[i].goods_big_logo}" alt="">
+                                    <img lazySrc="${this.res[i].goods_big_logo}" alt="">
                                     <p>${this.res[i].goods_name}</p>
                                     <span>￥${this.res[i].goods_number}</span><b>￥${this.res[i].goods_price}</b>
                                 </li>
@@ -99,7 +100,7 @@ define(()=>{
                     <a href="detail.html?id=${this.res[i].goods_id}">
                 
                         <li>
-                            <img src="${this.res[i].goods_big_logo}">
+                            <img lazySrc="${this.res[i].goods_big_logo}">
                             <div class="ba">
                                 <span>￥${this.res[i].goods_number}</span><b>￥${this.res[i].goods_price}</b><em>欧美</em>
                             </div>
@@ -112,6 +113,26 @@ define(()=>{
                      `
             }
             this.enjoy.innerHTML=str;
+            var aimg=document.querySelectorAll("img[lazySrc]");
+            var arr= Array.from(aimg);
+            console.log(arr);
+            var clientH=document.documentElement.clientHeight;
+            console.log(clientH);
+            onscroll = function(){
+                lazjLoad();
+            }
+            function lazjLoad(){
+                var scrollT=document.documentElement.scrollTop;
+                console.log(scrollT)
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i].offsetTop - clientH <scrollT){
+                            arr[i].src = arr[i].getAttribute("lazySrc");
+                            arr.splice(i,1);
+                            i--;
+                            // console.log(arr);
+                        }
+                }
+            }
         }
     }
     return xr;

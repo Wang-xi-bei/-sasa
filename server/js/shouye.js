@@ -1,7 +1,8 @@
 require.config({
     baseUrl:"module",
     paths:{
-        xr:"xr"
+        xr:"xr",
+        
     }
 })
 require(["xr"],(d)=>{

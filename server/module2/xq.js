@@ -2,7 +2,7 @@ define(()=>{
     class xq{
          constructor(){    
             this.tm=document.querySelector("#tm");
-           // this.yy=document.querySelector(".xq bb ul li");
+           this.yy=document.querySelector(".xq bb ul li");
             this.url = "http://localhost:81/js/data.json"
             // console.log(this.tm);
             this.load();
@@ -19,9 +19,9 @@ define(()=>{
         }
         display(){
             let u = location.search;
-            if(location.search == ""){
-                location.href="index.html";
-            }
+            // if(location.search == ""){
+            //     location.href="index.html";
+            // }
 
             const reg = /id=(\d+)/
             let index = reg.exec(u)[1]

@@ -3,11 +3,11 @@ define(()=>{
         constructor(){
             
             this.tm=document.querySelector("#tm");
-            console.log(this.tm);
+            //console.log(this.tm);
             this.oa=document.querySelector("#tm .m-r .car");
             this.box=document.querySelector(".box")
             this.num=document.querySelector("#tm input")
-            console.log(this.num);
+           // console.log(this.num);
             this.addEvent();
         }
         addEvent(){

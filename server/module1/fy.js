@@ -3,7 +3,7 @@ define(()=>{
          constructor(){    
          
             this.ff=document.querySelector(".bb ul");
-            // this.yy=document.querySelector(".xq bb ul li");
+         this.yy=document.querySelector(".xq bb ul li");
             this.url = "http://localhost:81/js/data.json"
             console.log(this.ff);
             //商品分类

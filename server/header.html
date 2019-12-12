@@ -197,6 +197,32 @@
         window.location.href = 'http://localhost:81';
     })
 </script>
+<script>
+ //懒加载
+ var aimg=document.querySelectorAll("img[lazySrc]");
+ console.log(aimg)
+        var arr= Array.from(aimg);
+        var clientH=document.documentElement.clientHeight;
+        console.log(clientH);
+        console.log(arr);
+        onscroll = function(){
+            lazjLoad();
+        }
+        function lazjLoad(){
+            var scrollT=document.documentElement.scrollTop;
+            console.log(scrollT)
+            for(var i=0;i<arr.length;i++){
+                if(arr[i].offsetTop - clientH <scrollT){
+                        arr[i].src = arr[i].getAttribute("lazySrc");
+                        arr.splice(i,1);
+                        i--;
+                        // console.log(arr);
+                    }
+            }
+        }
+        
+
+</script>
 
 </body>
 </html>
